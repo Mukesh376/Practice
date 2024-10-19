@@ -1,0 +1,38 @@
+The conversion to void* when using the %p format specifier in printf is necessary to ensure that the pointer is printed correctly. The %p specifier expects a void* pointer, and casting to void* ensures that the pointer is interpreted correctly by the printf function.
+
+Explanation
+Format Specifier %p:
+
+The %p format specifier is used to print pointer addresses.
+It expects an argument of type void*.
+Pointer Type Compatibility:
+
+Different pointer types (e.g., int*, char*, etc.) may have different representations.
+Casting to void* standardizes the representation, ensuring that printf handles the pointer correctly.
+Avoiding Warnings or Errors:
+
+Without casting to void*, some compilers may issue warnings or errors because the type expected by %p does not match the type of the provided pointer.
+
+
+
+uname -m
+
+The uname -m command is used to display the machine hardware name. It provides information about the machine architecture, such as x86_64, i686, armv7l, etc.
+
+gcc -m64 -o array_heap array_heap.c
+
+
+
+which python
+
+which python3
+
+curl https://pyenv.run | bash
+
+pyenv install 3.8.10
+pyenv install 3.9.5
+
+pyenv global 3.8.10
+pyenv local 3.9.5
+
+python script.py
